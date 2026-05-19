@@ -9,6 +9,7 @@ export default function InventoryManager(){
 
     //DELETE HANDLER
     const handleDelete=async(id, name)=>{
+        // The window is more of a pop notification seeking clearance on whether the user wants to delete 
         if(window.confirm(`Are you sure you want to delete ${name} from your inventory?`)){
             try{
                 const response=await fetch(`http://localhost:4000/coffee/${id}`,{method:"DELETE"})
@@ -30,14 +31,14 @@ export default function InventoryManager(){
             const response =await fetch(`http://localhost:4000/coffee/${id}`,{
                 method:"PATCH",
             headers: {"Content-Type":"application/json"},
-            body:JSON.stringify({name:editedName, price: parseFloat(editedPrice) })
+            body:JSON.stringify({name:editedName, price: parseFloat(editedPrice) })//JSON.stringify is to conert the javascript state data to raw text format for the backend API TO UNDERSTAND
             });
             if(!response.ok){
                 throw new Error();
             }
             alert("Updated successfully!");
             setEditingItemId(null);
-            window.location.reload();
+            window.location.reload();//the window reload is so that the page reloads and the suggested item using the id is deleted
         } catch(e){
             alert("Failed to update the item. Please try again later.");
         }

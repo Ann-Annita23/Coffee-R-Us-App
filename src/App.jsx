@@ -11,7 +11,7 @@ export default function App() {
   const [isUserAnAdmin, setUserAnAdmin]= useState(true);
   return (
     <BrowserRouter>
-{/*The Navbar stays outside of thr Routes so it is visible on every single page*/}
+{/*The Navbar stays outside of the Routes so it is visible on every single page*/}
       <Navbar />
 
       <main className="content-container">
