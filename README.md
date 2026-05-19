@@ -46,6 +46,6 @@ Follow these steps sequentially to clone, configure, and boot the ecosystem on y
 * Click the **Fork** button in the top-right corner to create a copy under your account.
 * Open your terminal, navigate to your desired workspace directory, and execute the clone command:
   ```bash
-  git clone [https://github.com/YOUR_USERNAME/your-forked-repo-name.git](https://github.com/YOUR_USERNAME/your-forked-repo-name.git)
+  git clone [https://github.com/Ann-Annita23/Coffee-R-Us-App.git.git]
     
                  
